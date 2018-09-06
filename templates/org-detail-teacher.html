@@ -1,0 +1,34 @@
+{% extends 'org-base.html' %}
+{% block title %}机构讲师页-幕学在线网{% endblock %}
+{% block page_path %}<a href="{% url 'org:org_teacher' course_org.id %}">机构教师</a>{% endblock %}
+{% block right_form %}
+<div class="right companycenter layout" >
+    <div class="head">
+        <h1>机构教师</h1>
+        <a class="green fr more" href="{% url 'org:org_teacher' course_org.id %}">查看更多  >  </a>
+    </div>
+
+    <div class="diarys">
+        {% for teacher in all_teacher %}
+        <div class="module5 share company-diary-box" style="padding:10px 0;">
+            <div class="left">
+                <img class="pic" src="{{ MEDIA_URL }}{{ teacher.image }}"/>
+                <p>讲师名字：{{ teacher.name }}</p>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <div class="fl">
+                        <a href=""><h1>{{ course_org.name }}</h1></a>
+                        <span>发表于：{{ teacher.add_time }}</span>
+                    </div>
+                </div>
+                <div class="middle" style="border-bottom:0;">教学特点:{{ teacher.points }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+</div>
+{% endblock %}
