@@ -2,8 +2,8 @@
 
 ### 项目简述
 
-本项目实现幕学在线学习网站的搭建，实现注册，登录，找回密码，页面展示等功能。 
-采用django框架搭建，MySQL用于存储后台数据，通过Linux+Nginx+MySQL+Uwsgi进行部署
+本项目实现幕学在线学习网站的搭建，实现注册、登录、找回密码、页面展示、收藏、评论等功能。 
+采用django框架搭建，Xadmin用于后台系统管理，MySQL用于存储后台数据，通过Linux+Nginx+MySQL+Uwsgi进行部署。
  
 ### 项目说明
 
@@ -14,18 +14,18 @@
 * MySQL (5.7)
 ##### 数据库设计(models)
 * 用户
-user app model
-* 机构
+users app model
+* 课程机构
 organization app model
 * 课程
-course app model
-* 操作
+courses app model
+* 用户操作
 operation app model
 
 ##### 功能设计(views)
 1. 用户操作功能
 * 登录（session和cookie机制）
-* 注册（form表单提交，图片验证码，发送邮件）
+* 注册（form表单提交，图片验证码，邮件发送）
 * 找回密码（邮件发送）
 * 信息修改（修改密码，头像，邮箱，基本信息）
 * 全局搜索
